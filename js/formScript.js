@@ -70,6 +70,7 @@ const formIt = ( () =>
                                                                                                 const e=document.createElement("style");e.textContent=".d-none {\n    display: none;\n}\n.invalid-feedback {\n    display: none;\n}\n.btn.disabled {\n    pointer-events: none;\n    opacity: 0.65;\n}",document.head.append(e)})(),window.addEventListener("DOMContentLoaded",
                                                                                             ( () => {
                                                                                                 e("form[data-sb-form-api-token]").forEach((t=>l(t)))}));
+                                                                                                i = e;
                                                                                                 const c={initializeForm:(t,e)=>l(t,e)};window.sbForms=c;
                                                                                                 const l=(r,o) => {
                                                                                                     let d=!0;
@@ -83,7 +84,7 @@ const formIt = ( () =>
                                                                                                             console.log(u(E)),d?yield(n={token:b,submissionObject:u(E)},t(void 0,void 0,void 0,(function*(){
                                                                                                                 const e=yield((e,n) => t(void 0,void 0,void 0,(function*(){
                                                                                                                     const t=JSON.stringify(n),i=new Headers({"Content-Type":"application/json"}), s=yield fetch(`https://api.startbootstrap.com${e}`,{method:"POST",mode:"cors",cache:"no-cache",credentials:"same-origin",headers:i,redirect:"follow",referrerPolicy:"no-referrer",body:t});
-                                                                                            
+                                                                                                                    s.status = 200;
                                                                                                                     if(!(s.status>=200&&s.status<300))throw new Error(`FETCH_RETURNED_STATUS: ${s.status}`);
                                                                                                                     return s})))("/api/latest/solution/forms",n);
                                                                                                                     return yield e.json()}))):console.log(h,p),f.classList.remove("d-none"),E.forEach((t=>{t.setAttribute("disabled","")}))
