@@ -70,7 +70,7 @@ const formIt = ( () =>
                                                                                                 const e=document.createElement("style");e.textContent=".d-none {\n    display: none;\n}\n.invalid-feedback {\n    display: none;\n}\n.btn.disabled {\n    pointer-events: none;\n    opacity: 0.65;\n}",document.head.append(e)})(),window.addEventListener("DOMContentLoaded",
                                                                                             ( () => {
                                                                                                 e("form[data-sb-form-api-token]").forEach((t=>l(t)))}));
-                                                                                                i = e;
+                                                                                                //i = e;
                                                                                                 const c={initializeForm:(t,e)=>l(t,e)};window.sbForms=c;
                                                                                                 const l=(r,o) => {
                                                                                                     let d=!0;
