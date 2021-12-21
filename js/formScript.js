@@ -71,12 +71,16 @@ const formIt = ( () =>
                                                                                             ( () => {
                                                                                                 e("form[data-sb-form-api-token]").forEach((t=>l(t)))}));
                                                                                                 //i = e;
-                                                                                                const c={initializeForm:(t,e)=>l(t,e)};window.sbForms=c;
+                                                                                                const c={initializeForm:(t,e)=>l(t,e)};
+                                                                                                window.sbForms=c;
                                                                                                 const l=(r,o) => {
                                                                                                     let d=!0;
                                                                                                     const c=[],l=()=>{w() },m=n("#submitButton",r),f=n("#submitSuccessMessage",r),v=n("#submitErrorMessage",r),b=r.dataset.sbFormApiToken;
                                                                                                     "API_TOKEN"===b&&(d=!1,console.log(h,p));
-                                                                                                    const E=o||e("input, textarea, select",r);E.forEach((t=>{const e=t.dataset.sbValidations;e?(t.dataset.sbCanSubmit="no",c.push(new s(t,(t=>{const e=t.split(",").map((t=>t.trim()));
+                                                                                                    const E=o||e("input, textarea, select",r);
+                                                                                                    E.forEach(( t=> {
+                                                                                                        const e = t.dataset.sbValidations;e?(t.dataset.sbCanSubmit="no",c.push(new s(t,( t=> { 
+                                                                                                            const e=t.split(",").map((t=>t.trim()));
                                                                                                     return e.forEach((t => {
                                                                                                         if(!(t in i))throw new Error(`UNRECOGNIZED_VALIDATION_KEY: ${t}`)})),e})(e),l))):t.dataset.sbCanSubmit="yes"}));
                                                                                                         const y=e=>{return n=void 0,i=void 0,a=function*(){e.preventDefault(),m.classList.add("d-none");
